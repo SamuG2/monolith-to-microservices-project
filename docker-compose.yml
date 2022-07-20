@@ -26,7 +26,8 @@ services:
       - SHOP_RABBITMQ_ADDR=$SHOP_RABBITMQ_ADDR
       - SHOP_RABBITMQ_ORDERS_TO_PAY_QUEUE=$SHOP_RABBITMQ_ORDERS_TO_PAY_QUEUE
       - SHOP_SHOP_SERVICE_ADDR=$SHOP_SHOP_SERVICE_ADDR
-    volumes: -hostPath:containerPath:ro
+    volumes: 
+      - hostPath:containerPath:ro
 
     depends_on:
       - rabbitmq
